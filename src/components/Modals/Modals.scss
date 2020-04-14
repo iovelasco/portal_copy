@@ -1,0 +1,128 @@
+@import '../../style/odin-theme';
+@import '~@andes/modal/index';
+$custom-color-blue-dark: #151E23;
+$custom-color-dark-light:#162630;
+
+.andes-modal--loose {
+  .andes-modal-dialog {
+    max-height: auto !important;
+    min-height: 80%;
+
+    &__header {
+      background: $custom-color-blue-dark;
+      margin-right: 0;
+      padding: $andes-spacing-24;
+
+      h3 {
+        color: $andes-white;
+        font-size: 1.5em;
+      }
+    }
+
+    &__button-close {
+      right: 32px;
+      top: 32px;
+      margin-top: 0;
+    }
+
+    .andes-modal-dialog__content {
+      padding: $andes-spacing-16 $andes-spacing-56;
+    }
+
+    &__actions {
+      border-top: 1px solid $andes-gray-70;
+      justify-content: flex-end;
+      padding: 24px;
+      display: flex;
+    }
+  }
+}
+
+.form-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.form-label {
+  flex: 15%
+}
+
+.form-input {
+  flex: 70%
+}
+
+.modal-section {
+  &--path {
+    background: $custom-color-blue-light;
+    padding: $andes-spacing-16;
+    color:$andes-blue-400;
+    span{
+      color:$andes-white;
+    }
+  }
+  &--input{
+    width: 90%;
+    margin:$andes-spacing-8 auto 0 ;
+  } 
+  .andes-modal-dialog__content {
+    padding: 0 !important;
+  }
+
+  .accordion__section {
+    padding: 0;
+    border-top: 2px solid $andes-gray-70;
+    .accordion__title {
+      margin: auto;
+      border-bottom:2px solid $andes-gray-70;
+      transition: .2s;
+      &:focus {
+        outline: none !important;
+      }
+
+    }
+    .accordion__body {
+      padding: 0;
+      border-bottom: 1px solid $andes-gray-70;
+    }
+    &--lv1 {
+      display: flex;
+      justify-items: start;
+      flex-direction: column;
+      padding:0;
+        .accordion__title {
+          background: $andes-white;
+          margin: auto;
+          &:hover{
+            background: $andes-blue-400;
+            h4{
+              color: $andes-white;
+            }
+          }
+          h4{
+            color: $andes-gray-450;
+          }
+        }
+
+    }
+    &--lv2 {
+      .accordion__title {
+        width: 96%;
+        margin:0 0 0 4%;
+        background: $andes-gray-70;
+        &:hover{
+          background: $andes-blue-400;
+          h4{
+            color: $andes-white;
+         
+          }
+        }
+        h4{
+          color: $andes-gray-450;
+          font-weight: $font-weight-bold;
+        }
+      }
+    }
+  }
+}

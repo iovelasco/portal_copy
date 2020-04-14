@@ -1,0 +1,41 @@
+@import '../../../style/odin-theme';
+
+.pages-tool{
+  padding: $andes-spacing-32;
+  min-height: 60vh;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  &--card{
+    transform: .3s;
+    min-height: 250px;
+    justify-content:  space-between;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    div:first-child{
+      padding: $andes-spacing-24;
+      justify-content:  center;
+      align-content: center;
+      display: flex;
+      height: 160px;
+      img{
+        height: 80px;
+        width: auto;
+        align-self: flex-end;
+      }
+    }
+    p{
+      background: $andes-bg-secondary;
+      padding: $andes-spacing-24;
+      text-align: center;
+      border-top: 1px solid $andes-yellow-400;
+      color:$andes-gray-600;
+      font-size: $font-size-18;
+    }
+    &:hover{
+      box-shadow: $shadow-medium;
+    }
+  }
+}

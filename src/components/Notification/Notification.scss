@@ -1,0 +1,134 @@
+@import '../../style/odin-theme';
+@import '../../style/elemnts/custom-mixin';
+
+$height-list: 300px;
+
+.notification {
+  position: absolute;
+  padding: 0;
+  list-style: none;
+  background: $andes-white;
+  padding: 0;
+  border-radius:5px;
+  z-index: 5;
+  right: 2%;
+  top: 9%;
+  min-width: 360px;
+  max-width: 360px;
+  box-shadow: $shadow-medium;
+
+  
+  &--card {
+    border-radius: 2.5px;
+    background: $andes-white;
+    max-height: $height-list;
+    min-height: $height-list;
+    overflow: scroll;
+  }
+
+  &--header {
+    @include flex-start;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: $custom-color-blue-dark;
+    border-bottom: 1px solid $andes-yellow-500;
+    padding: $andes-spacing-4 $andes-spacing-16;
+    display: flex;
+    justify-content: space-between;
+    p{
+      font-weight: $font-weight-light;
+      font-size: $font-size-18;
+      color:$andes-white;
+    }
+    p:last-child{
+      @include icon-circle(25px,$andes-white , $andes-blue-400, $andes-blue-400, none);
+      font-size: $font-size-14;
+      font-weight: $font-weight-regular;
+      cursor: auto;
+  }
+}
+
+  &--list{
+    max-height: ($height-list - 50px);
+    min-height:  ($height-list - 50px);
+    overflow-y: scroll;
+
+  }
+  &--item-list{
+    @include flex-column; 
+    position: relative;
+    border-bottom: 1px solid $andes-gray-70;
+    &:hover {
+      background: $andes-gray-70;
+    }
+    &:hover:after {
+      content: " ";
+      left: 10px;
+      display: block;
+      width: 5px;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      background: $andes-blue-400;
+      position: absolute;
+    }
+      p {
+        color:$andes-gray-600;
+      }
+
+  }
+
+  &--header-item-list {
+    @include flex-wrap;
+    padding: $andes-spacing-4 $andes-spacing-8;
+    align-items: center;
+    transition: ease .2s;
+    cursor: pointer;
+    position: relative;
+    .name {
+      @include flex-between;
+      padding-right: $andes-spacing-16;
+      flex-grow:2;
+      font-size: $font-size-14;
+      margin-left: 4px;
+      width: 60%;
+      color:$andes-gray-800;
+      svg{
+        margin-right:$andes-spacing-8;
+        color:$andes-gray-100;
+      }
+    }
+    .date {
+      @include flex-column;
+      flex-grow:3;
+      span {
+        font-weight: $font-weight-regular;
+      }
+      p:first-child{
+        text-align: center;
+      }
+      p:last-child{
+        display: inline-block;
+        font-size: $font-size-12;
+        font-weight: $font-weight-bold;
+        text-align: right;
+        min-height: 20px;
+        background: $andes-gray-70;
+        border-radius: 2.5px;
+        padding: ($andes-spacing-4 / 2) $andes-spacing-4;
+      }
+    }
+    .img {
+      @include icon-circle-img(40px, $andes-gray-100);
+    }
+  }
+    &--description-item-list{
+      padding: $andes-spacing-4;
+      padding-left: $andes-spacing-16;
+      p{
+        font-size: $andes-spacing-12;
+      }
+    }
+}

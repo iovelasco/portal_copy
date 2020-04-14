@@ -1,0 +1,187 @@
+@import '../../../style/odin-theme';
+@import '~@andes/table/index';
+@import '../../../style/elemnts/custom-mixin';
+
+.pages-section {
+  .pages-header {
+    &--title {
+      width: 100%;
+      h3{
+        width: auto;
+      }
+      .button-circle {
+        margin: 0 0 0 $andes-spacing-24!important;
+      }
+      .pages-header--icon{
+        min-width: 90px;
+        max-width: 90px;
+        min-height: 90px;
+        max-height: 90px;
+      }
+    }
+    &--dinamic-title{
+      @include flex-center;
+    }
+  }
+
+
+  &__contianer-list {
+    overflow: auto;
+    padding: $andes-spacing-32;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 32.3%);
+    grid-template-rows: auto auto auto auto;
+    grid-row-gap: 16px;
+    grid-column-gap: 16px;
+    list-style: none;
+    width: 100%;
+  }
+
+  &__list-item {
+    display: flex;
+    flex-direction: column;
+    background: $andes-white;
+    border-radius: 2.5px;
+    box-shadow: none;
+    transition: .1s;
+    background-image: url(../../../assets/image/section-img-dash.svg);
+    background-position: 105% 45%;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    overflow: hidden;
+
+    &:hover {
+      box-shadow: $shadow-medium;
+    }
+  }
+
+  &__item-title {
+    position: relative;
+    height: 80px;
+
+    p {
+      padding: $andes-spacing-12 $andes-spacing-12;
+      font-size: $font-size-14;
+      color: $andes-white;
+      background: lighten($custom-color-blue-light, 10%);
+      width: auto;
+      position: absolute;
+      top: $andes-spacing-8;
+      left: $andes-spacing-8;
+      border-radius: 5px;
+      max-width: 64%;
+    }
+  }
+
+  &__img {
+    padding: $andes-spacing-4;
+    display: flex;
+
+    img {
+      width: 50%;
+      height: 140px;
+      align-self: center;
+      margin: auto;
+    }
+  }
+
+  &__icon {
+    padding: $andes-spacing-16;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+
+    .icon {
+      cursor: pointer;
+      border: 1px solid $andes-white;
+      margin: 0 $andes-spacing-8 0 0;
+      padding: $andes-spacing-4;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+      transition: ease .2s;
+      background: $andes-yellow-400;
+
+      &:hover {
+        border: 1px solid $andes-yellow-400;
+
+        .svg-inline--fa {
+          color: $andes-gray-600;
+          transition: color ease .2s;
+        }
+      }
+
+      .svg-inline--fa {
+        color: $andes-gray-600;
+        transition: color ease .2s;
+      }
+    }
+  }
+
+  .pages-section__chips {
+    display: flex;
+    width: 100%;
+    padding: $andes-spacing-12;
+    flex-direction: column;
+    max-height: 150px;
+    overflow: auto;
+
+    p {
+      font-size: $font-size-14;
+      color: $andes-gray-450;
+      margin-bottom: $andes-spacing-12;
+    }
+
+    div {
+      border-right: 1px solid $andes-gray-70;
+      padding: $andes-spacing-8;
+      max-width: 100%;
+      width: 50%;
+      border-bottom: 1px solid $andes-gray-70;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      flex-wrap: wrap;
+
+      li {
+        border-radius: 5px;
+        color: $andes-white;
+        padding: $andes-spacing-4 $andes-spacing-8;
+        margin-right: $andes-spacing-8;
+        margin-bottom: $andes-spacing-8;
+      }
+    }
+
+    .metric {
+      li {
+        background: $andes-blue-400;
+      }
+
+      li:nth-child(2n + 1) {
+        background: $andes-blue-300;
+      }
+    }
+
+    .attributes {
+      li {
+        background: $andes-blue-400;
+      }
+
+      li:nth-child(2n + 1) {
+        background: $andes-blue-300;
+      }
+    }
+  }
+}

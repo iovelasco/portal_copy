@@ -1,0 +1,17 @@
+@import '../../style/odin-theme';
+
+$width-height : auto;
+
+button.button-circle{
+  min-width:$width-height;
+  max-width:$width-height;
+  min-height:$width-height;
+  max-height:$width-height;
+  border-radius: 50%;
+  display: flex;
+  padding:10px;
+  border:none;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}

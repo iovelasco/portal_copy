@@ -1,0 +1,47 @@
+@import '../../../style/odin-theme';
+
+
+.pages-faq {
+  width: 100%;
+  padding: $andes-spacing-32;
+  &--question{
+    background: $andes-white;
+    border-radius: 5px;
+    padding: $andes-spacing-32;
+    margin-bottom: $andes-spacing-16;
+    border:1px solid $andes-gray-70;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    h2{
+      margin-bottom: $andes-spacing-8;
+      &:after{
+        content: "";
+      display: block;
+      background: $andes-bg-secondary;
+      border-bottom: 1px solid  $andes-yellow-400;
+      height: 40px;
+      width: 40px;
+      position: absolute;
+      left: -20px;
+      top:27px;
+      border-radius: 50%;
+    }
+    }
+    p{
+      margin-bottom: $andes-spacing-16;
+      color:$andes-gray-450;
+      line-height: 1.5;
+    }
+    div:first-child{
+      width: 95%;
+    }
+    div:last-child{
+      width: 5%;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      
+    }
+  }
+}

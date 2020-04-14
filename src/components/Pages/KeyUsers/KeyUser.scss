@@ -1,0 +1,117 @@
+@import '../../../style/odin-theme';
+@import '../../../style/elemnts/custom-mixin';
+
+.pages-key-user {
+  display: grid;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(2, 1fr);
+  background: transparent;
+  grid-row-gap: $andes-spacing-16;
+  grid-column-gap: $andes-spacing-16;
+  padding: $andes-spacing-32;
+
+  &--list {
+    max-height: 260px;
+    min-height: 260px;
+    overflow: auto;
+    border-radius: 2.5px;
+    background: $andes-white;
+  }
+
+  &--header {
+    @include flex-start;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: $andes-white;
+    border-bottom: 1px solid $andes-yellow-500;
+    padding: $andes-spacing-4 $andes-spacing-16;
+
+    img {
+      height: 40px;
+      width: auto;
+      margin-right: $andes-spacing-16;
+    }
+
+    .corp {
+      height: 30px;
+    }
+
+    h3 {
+      font-weight: $font-weight-light;
+      font-size: $font-size-18;
+    }
+  }
+
+  &--list-item {
+    padding: $andes-spacing-4 $andes-spacing-8;
+    @include flex-start;
+    border-bottom: 1px solid $andes-gray-100;
+    transition: ease .2s;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      background: $andes-gray-70;
+    }
+
+    &:hover:after {
+      content: " ";
+      left: 10px;
+      display: block;
+      width: 5px;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      background: $andes-blue-400;
+      position: absolute;
+    }
+
+    .img {
+      @include icon-circle-img(40px, $andes-gray-100);
+    }
+
+    >div {
+      min-width: 30%;
+      max-width: 50%;
+      padding: $andes-spacing-4 $andes-spacing-8;
+
+      p {
+        margin-bottom: $andes-spacing-4;
+      }
+    }
+
+    .email {
+      font-size: $font-size-14;
+      color: $andes-gray-600;
+    }
+
+    .first-item {
+      width: 40%;
+    }
+
+    .name {
+      font-size: $font-size-16;
+      font-weight: $font-weight-light;
+      margin-left: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .specialization,
+    .id {
+      background: $andes-gray-70;
+      border-radius: 2.5px;
+      padding: ($andes-spacing-4 / 2) $andes-spacing-4;
+      display: inline-block;
+      font-size: $font-size-12;
+      font-weight: $font-weight-bold;
+
+      span {
+        font-weight: $font-weight-regular;
+      }
+    }
+  }
+}

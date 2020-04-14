@@ -1,0 +1,92 @@
+&--list-group {
+  border-bottom: none;
+  .accordion__title {
+    background: lighten($custom-color-blue-light, 1%);
+    padding: $andes-spacing-12;
+    padding-left: $andes-spacing-16;
+    display: flex;
+    justify-content: space-between;
+    font-size: $font-size-18;
+    &:hover {
+      background: lighten($custom-color-blue-light, 10%);
+    }
+    &:focus{
+      outline: none;
+    }
+    h3 {
+      color: $andes-white;
+      width: 80%;
+      font-size: $font-size-16;
+    }
+    .accordion--arrow-icon {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      color: #484848;
+      transform: rotate(90deg);
+      transition: transform ease-in .1s;
+    }
+  }
+  .accordion--arrow {
+    .accordion--arrow-icon {
+      transform: rotate(180deg);
+      transition: transform ease-in .1s;
+    }
+  }
+  .accordion__item + .accordion__item {
+    border-top: none;
+  }
+  .accordion__body {
+    padding: 0;
+    ul {
+      li:last-child {
+        border-bottom: none;
+      }
+      li {
+        padding: $andes-spacing-16;
+        padding-left: $andes-spacing-24;
+        color: $andes-white;
+        cursor: pointer;
+        display: flex;
+        transition: .3s;
+
+        &:hover {
+          background: lighten($custom-color-blue-light, 5%);
+        }
+        .button-circle {
+          margin-right: 0;
+          border-radius: 2.5px;
+          padding: 0;
+            svg {
+              width: 0.5em;
+            }
+          }
+        }
+      }
+    }
+    .accordion--section{
+        .accordion--section-lvl-2{
+          .accordion__title{
+            background: $custom-color-blue-dark;
+            padding-left: 15%;
+            transition: .2s;
+            &:hover {
+              background: lighten($custom-color-blue-light, 2%);
+            }
+            h3{
+              font-size: $font-size-14;
+            }
+        }
+          .accordion--section-lvl-3{
+            .accordion__title{
+              background: $custom-color-blue-dark;
+              padding-left: 25%;
+              transition: .2s;
+              &:hover {
+                background: lighten($custom-color-blue-light, 2%);
+              }
+          }
+        }
+      }
+    }
+  }

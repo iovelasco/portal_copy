@@ -1,0 +1,159 @@
+@import '../../style/odin-theme';
+$custom-color-blue-dark: #151E23;
+$custom-color-blue-light:#162630;
+$width-height: auto;
+.login {
+  background: $andes-yellow-400;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  &--bg {
+    background: $custom-color-blue-light;
+    background-image: url(../../assets/image/icon-chart.svg);
+    background-position: center;
+    background-size: 98%;
+    background-repeat: no-repeat;
+    border-top: 1px solid #00dde7;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 76%;
+    z-index: -1;
+    box-shadow: $shadow-heavy;
+  }
+  &--logo {
+    height: 20vh;
+    img {
+      width: 350px;
+      height: auto;
+    }
+  }
+  &__card {
+    min-height: 50vh;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    form {
+      width: 100%;
+      margin-bottom: $andes-spacing-24;
+      margin-bottom: $andes-spacing-16;
+      .andes-form-control {
+        margin-bottom: $andes-spacing-24;
+      }
+    }
+    .andes-button {
+      margin-top: $andes-spacing-24;
+      width: 100%;
+    }
+  }
+  &--list {
+    max-height: 50vh;
+    overflow: scroll;
+    display: block;
+    position: relative;
+    ul.andes-list {
+      width: 100%;
+      li.andes-list__group--header {
+        background: $custom-color-blue-light;
+        padding: $andes-spacing-24 $andes-spacing-24;
+        color: $andes-white;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        .andes-list__group--header-label {
+          color: $andes-white;
+          font-size: $font-size-16;
+        }
+      }
+      li.andes-list__item {
+        .andes-list__item-primary{
+          font-size: $font-size-18;
+        }
+        >div:first-child {
+          width: 80%;
+        }
+      }
+      button.andes-button {
+        min-width: $width-height;
+        max-width: $width-height;
+        min-height: $width-height;
+        max-height: $width-height;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        padding: 10px;
+        border: none;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-right: 0;
+      }
+    }
+  }
+
+  .login--float-box{
+
+      background: $andes-blue-400;
+      min-height: 80px;
+      min-width: 80px;
+      padding: $andes-spacing-16;
+      position: absolute;
+      bottom: 25%;
+      right: 0px;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      border-radius: 2.5px;
+      animation: animationFrames linear 2s;
+      animation-iteration-count: 100;
+      transform-origin: 50% 50%;
+      animation-fill-mode:forwards; /*when the spec is finished*/
+      &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        background: $andes-blue-400;
+        border-radius: 2px;
+        right: 4px;
+        bottom: -10px;
+        height: 20px;
+        width: 20px;
+        transform: rotate(45deg);
+      }
+      .icon{
+        margin-right: 16px;
+      }
+      p{
+        color:white;
+        font-size: 18px;
+      }
+  }
+}
+
+
+@keyframes animationFrames{
+  0% {
+    transform:  translate(-29px,-26px)  ;
+  }
+  20% {
+    transform:  translate(-29px,-46px)  ;
+  }
+  100% {
+    transform:  translate(-29px,-26px)  ;
+  }
+}
+

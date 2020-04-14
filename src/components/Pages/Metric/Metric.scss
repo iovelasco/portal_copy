@@ -1,0 +1,39 @@
+@import '../../../style/odin-theme';
+@import '~@andes/table/index';
+
+.pages-metric{
+  padding: $andes-spacing-32;
+  &--search{
+    border-radius: 2.5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: $andes-spacing-16;
+    .andes-form-control{
+      width: 500px;
+      border-radius: 5px;
+      margin-left: 24px;
+    }
+  }
+  &__button-option-row{
+    width: 160px;
+    span{
+      display: flex;
+      justify-content: space-around;
+      .andes-button{
+        margin: 0;
+      }
+    }
+  }
+  &__button-option-header{
+  text-align: center;
+  }
+  .button-circle{
+    margin: 0;
+    border-radius: 5px;
+    margin-left:  $andes-spacing-16;
+  }
+}

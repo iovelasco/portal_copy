@@ -1,0 +1,14 @@
+{
+  "presets": [
+    "react"
+  ],
+  "env": {
+    "development": {},
+    "production": {
+      "plugins": [
+        "transform-react-inline-elements",
+        "transform-react-constant-elements"
+      ]
+    }
+  }
+}

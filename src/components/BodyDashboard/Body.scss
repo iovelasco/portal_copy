@@ -1,0 +1,209 @@
+@import '../../style/odin-theme';
+
+$bg-grey-header-body:#4f4f4f;
+$witdh-drawer-body: 400px;
+$shadow-drawer:-7px 7px 19px 0px #24242454;
+
+$custom-color-blue-dark: #151E23;
+$custom-color-blue-light:#162630;
+
+
+.body{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.body-drawer {
+  overflow: scroll;
+  overflow: hidden;
+  position: fixed;
+  top:0;
+  bottom: 0;
+  right: -$witdh-drawer-body;
+  z-index: 3;
+  margin-right:0;
+  padding-top:64px;
+  background:$custom-color-blue-dark;
+  color: $andes-white;
+  transition: right .3s ease;
+
+  h3 , p, span{
+    color: $andes-white;
+  }
+  &__container{
+    width: $witdh-drawer-body;
+    height: 100%;
+    overflow: scroll;
+  }
+  &--header {
+    display: flex;
+    align-items: center;
+    border-top: 2px solid $andes-yellow-400;
+    background: $andes-gray-250;
+    transition: .2s;
+  }
+  &__section{
+    p{
+      font-size: $andes-spacing-16;
+      letter-spacing: 1px;
+    }
+    padding: $andes-spacing-16 $andes-spacing-20;
+    cursor: pointer; 
+    transition: .3s;
+    background: $andes-gray-250;
+    border-bottom: 1px solid $andes-gray-250;
+    &:hover{
+      background-color: $andes-gray-450;
+    }
+  }
+  &--description-closed{
+    height: 0;
+    overflow: hidden;
+    transition: height .3s ease;
+
+  }
+  &--description{
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    transition: height .3s ease;
+    .text-info{
+      padding: $andes-spacing-16;
+      p:first-child {
+        font-size: $font-size-12;
+        font-weight: bold;
+        margin-bottom: $andes-spacing-4;
+        letter-spacing: 1px;
+      }
+      p:last-child {
+        font-size: $font-size-14;
+      }
+    }
+  } 
+  &--list-group {
+    border-bottom: none;
+    p{
+      font-size: $font-size-12;
+    }
+    .accordion__item{
+      display: flex;
+      flex-direction: column;
+    }
+    .accordion__title {
+      background: lighten($custom-color-blue-light, 1%);
+      padding: $andes-spacing-12;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      font-size: $font-size-18;
+      margin-bottom: $andes-spacing-4;
+      &:hover {
+        background: lighten($custom-color-blue-light, 10%);
+      }
+      &:focus{
+        outline: none;
+      }
+      p{
+        font-weight: $font-weight-bold;
+      }
+      h3 {
+        color: $andes-white;
+        width: 80%;
+        font-size: $font-size-16;
+      }
+    }
+    .accordion__body {
+      padding: $andes-spacing-16;
+      }
+      .accordion--section{
+          .accordion--section-lvl-2{
+            .accordion__title{
+              background: $custom-color-blue-dark;
+              padding-left: 15%;
+              transition: .2s;
+              &:hover {
+                background: lighten($custom-color-blue-light, 2%);
+              }
+              h3{
+                font-size: $font-size-14;
+              }
+          }
+            .accordion--section-lvl-3{
+              .accordion__title{
+                background: $custom-color-blue-dark;
+                padding-left: 25%;
+                transition: .2s;
+                &:hover {
+                  background: lighten($custom-color-blue-light, 2%);
+                }
+            }
+          }
+        }
+      }
+    }
+}
+
+.drawer-body-open  {
+  width: $witdh-drawer-body;
+  right: 0;
+  box-shadow: $shadow-drawer;
+}
+
+.body-iframe {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+iframe {
+  height: 100%;
+  width: 100%;
+  border-style: none;
+}
+
+.error-status {
+
+  .andes-tag__tag-hover-surface {
+    background-color: rgba(255, 0, 0, 1) !important;
+  }
+
+  .andes-tag__label {
+    color: white !important;
+  }
+
+}
+
+.delayed-status {
+
+  .andes-tag__tag-hover-surface {
+    background-color: rgb(224, 157, 56) !important;
+  }
+
+  .andes-tag__label {
+    color: white !important;
+  }
+
+}
+
+.on-time-status {
+  .andes-tag__tag-hover-surface {
+    background-color: rgb(9, 165, 35) !important;
+  }
+
+  .andes-tag__label {
+    color: white !important;
+  }
+
+}
+
+.status-tag {
+  height: 0;
+  position: relative;
+  display: flex;
+  align-self: flex-end;
+  top: 10px;
+  right: 10px;
+}

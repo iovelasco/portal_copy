@@ -1,0 +1,22 @@
+.image-component{
+  cursor: pointer;
+  display: inline;
+  margin: 0;
+  margin-top: 2px;
+}
+@mixin icon-circle-img($widthHeight,$border) {
+  @include flex-center;
+  background: $andes-white;
+  border: 1px solid;
+  max-width: $widthHeight;
+  max-height: $widthHeight;
+  min-width: $widthHeight;
+  min-height: $widthHeight;
+  border-color: $border;
+  border-radius: 50%;
+  padding: $andes-spacing-8;
+  overflow: hidden;
+    img{
+      width: 100%;
+    }
+}

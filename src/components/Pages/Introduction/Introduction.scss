@@ -1,0 +1,24 @@
+@import '../../../style/odin-theme';
+
+.pages--introduction {
+  padding: $andes-spacing-32 $andes-spacing-32;
+  background: $andes-white;
+  border-radius: 5px;
+  padding: $andes-spacing-32;
+  margin-bottom: $andes-spacing-16;
+  border:1px solid $andes-gray-70;
+  background-image: url(../../../assets/image/imagotipo-06.svg) ;
+  background-position: 100% 45%;
+  background-size: 20%;
+  background-repeat: no-repeat;
+  margin-top:  $andes-spacing-24;
+  min-height: 60vh;
+  p {
+    text-align: justify;
+    font-size: 19px;
+    font-weight: $font-weight-regular;
+    margin:$andes-spacing-16 20% $andes-spacing-16 5%;
+    line-height: 1.8;
+    color: $andes-gray-450;
+  }
+}

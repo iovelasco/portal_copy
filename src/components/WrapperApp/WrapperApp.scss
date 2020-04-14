@@ -1,0 +1,35 @@
+.wrapper-app-component{
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  .body-app-wrapper-open{
+    width: calc(100% - 240px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: .3s;
+  }
+  .body-app-wrapper-close{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: .3s;
+  }
+} 
+
+.blur{
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  background: #0000004f;
+  z-index: 2;
+}
+

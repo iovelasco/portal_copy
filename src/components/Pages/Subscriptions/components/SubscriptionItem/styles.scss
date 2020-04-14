@@ -1,0 +1,48 @@
+.subscription-item-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 5px;
+  padding: 12px;
+  width: 90%;
+  margin-top: 24px;
+}
+
+
+.error-status {
+
+  .andes-tag__tag-hover-surface {
+    background-color: rgba(255, 0, 0, 1) !important;
+  }
+
+  .andes-tag__label {
+    color: white !important;
+  }
+
+}
+
+.delayed-status {
+
+  .andes-tag__tag-hover-surface {
+    background-color: rgb(224, 157, 56) !important;
+  }
+
+  .andes-tag__label {
+    color: white !important;
+  }
+
+}
+
+.on-time-status {
+  .andes-tag__tag-hover-surface {
+    background-color: rgb(9, 165, 35) !important;
+  }
+
+  .andes-tag__label {
+    color: white !important;
+  }
+
+}

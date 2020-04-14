@@ -1,0 +1,84 @@
+@mixin icon-circle($widthHeight, $color, $bg, $bgHover, $border) {
+  @include flex-center;
+  color: $color;
+  width: $widthHeight;
+  height: $widthHeight;
+  border-radius: 50%;
+  border: 1px solid;
+  cursor: pointer;
+  background: $bg;
+  transition: .2s;
+  border-color: $border;
+  &:hover {
+    background: $bgHover;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+@mixin flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+}
+
+@mixin flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-wrap {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+//flex: 0 1 auto;
+@mixin custom-accordion {
+  .accordion {
+    border: none;
+    p{
+        text-align: center;
+    }
+  }
+  .accordion__item {
+  }
+  .accordion__title {
+    padding: 0;
+    &:focus{
+        outline: none!important;
+      }
+  }
+  .accordion__body{
+      padding: $andes-spacing-8;
+      background: $andes-gray-70;
+  }
+}
+
+@mixin icon-circle-img($widthHeight,$border) {
+  @include flex-center;
+  background: $andes-white;
+  border: 1px solid;
+  max-width: $widthHeight;
+  max-height: $widthHeight;
+  min-width: $widthHeight;
+  min-height: $widthHeight;
+  border-color: $border;
+  border-radius: 50%;
+  padding: $andes-spacing-8;
+  overflow: hidden;
+    img{
+      width: 100%;
+    }
+}

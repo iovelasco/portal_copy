@@ -1,0 +1,161 @@
+@import '../../style/odin-theme';
+
+.dash-config {
+  background-color: $andes-white;
+  width: 100%;
+  border-radius: 5px;
+  overflow: scroll;
+  padding: 0;
+  &__title-section{
+    background-color:#fbfbfb;
+    color: $andes-gray-800;
+    border-bottom: 1px solid  $andes-yellow-400;
+    width: 100%;
+    padding: $andes-spacing-4 $andes-spacing-4;
+    h3{
+      background: $custom-color-blue-light;
+      color:$andes-white;
+      border-radius: 2.5px;
+      width: 18%;
+      padding: $andes-spacing-8 $andes-spacing-16;
+    }
+  }
+  &__container{
+    margin: 0;
+
+  }
+  &__section{
+    width: 100%;
+    padding: $andes-spacing-24 $andes-spacing-16 0 $andes-spacing-16 ;
+    border-bottom: 1px solid $andes-gray-100;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 auto;
+    >div:nth-child(2n+0){
+      margin-bottom:$andes-spacing-16;
+    }
+    >div:nth-child(1n+0){
+      padding-right: $andes-spacing-16;
+    }
+    .button-circle{
+      margin:0 0 0 $andes-spacing-20;
+      border-radius: 5px;
+      transition: .5;
+      &:hover{
+        box-shadow: 0px 6px 11px 0px $andes-gray-100;
+        transition: .5;
+      }
+    }
+  }
+  &__input-section{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    .andes-form-control{
+      width: 70%;
+      margin-right: $andes-spacing-16;
+    } 
+    .andes-button--small{
+      padding: $andes-spacing-8 $andes-spacing-16;
+      height: 52px;
+    }
+  }
+  &__section-tag {
+    width: 100%;
+    padding: $andes-spacing-24 $andes-spacing-16 $andes-spacing-16 $andes-spacing-16 ;
+    border-bottom: 1px solid $andes-gray-100;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 auto;
+    min-height: 160px;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    p{
+      position: absolute;
+      top: 20px;
+      font-size: 18px;
+      color:$andes-gray-600;
+    }
+    .dash-config__tags-container{
+      padding-left: $andes-spacing-24;
+      margin-top: $andes-spacing-24;
+      .andes-tag{
+        margin: 8px;
+        margin-left: 0;
+      }
+    }
+  }
+  &--atributos{
+    position: relative;
+    display: flex;
+    padding-right: 0!important;
+    .button-circle{
+      border-radius: 5px;
+      margin: 0;
+      float: right;
+    }
+    p{
+      position: absolute;
+      top: 20px;
+      font-size: 18px;
+      color:$andes-gray-600;
+    }
+  }
+  &--section-drop{
+    display: flex;
+    .andes-dropdown {
+      width: 100%;
+    }
+  }
+  &--autocomplete{
+    .button-circle{
+      margin: 0;
+    }
+    > span{
+      width: 45%;
+      padding:0 $andes-spacing-24 0 $andes-spacing-12 ;
+      position: relative;
+      textarea{
+        width: 100%;
+        border:none;
+        margin: $andes-spacing-8 0 $andes-spacing-4;
+        border-bottom:1px solid $andes-gray-250;
+        font-size: 1.2em;
+        font-family: $font-family-primary;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        padding-top: 12px;
+        padding-left: $andes-spacing-12;
+        color:$andes-gray-600;
+        resize: none;
+        line-height: 0.8;
+        &:focus{
+          outline: 0;
+        }
+      }
+    }
+    .react-autocomplete-input{
+      background: $andes-white; 
+      border-radius: 5px;
+      box-shadow: $shadow-light;
+      position: absolute;
+      z-index: 20;
+      li{
+        padding: $andes-spacing-8 $andes-spacing-16;
+        &:hover{
+          background: $andes-gray-70;
+        }
+      }
+    }
+  }
+  &__footer{
+    width: 100%;
+    padding: $andes-spacing-24;
+    display: flex;
+    justify-content: center;
+  }
+}
+

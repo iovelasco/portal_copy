@@ -1,0 +1,523 @@
+@import '../../style/odin-theme';
+@import '../../style/elemnts/custom-mixin';
+@import '../../style/elemnts/custom-suggestion';
+
+$meli-metric-gray:#f4f6fa;
+$meli-metric-blue:#4c80ff;
+
+.meli-metric {
+  padding: 0;
+  height: 100%;
+  position: relative;
+  background-color: $andes-white;
+  background-image: url(../../assets/image/bg-meliMetric.svg);
+  background-size: 14px;
+
+  >.row {
+    margin: 0;
+    height: 100%;
+  }
+
+  &__search-container {
+    display: flex;
+    position: relative;
+    padding: 0;
+    padding-top: $andes-spacing-16;
+    flex-direction: column;
+    background: $meli-metric-gray;
+    box-shadow: $shadow-medium;
+
+    .react-autosuggest__input {
+      width: 100%;
+    }
+
+    .meli-metric__search-list {
+      border-bottom: 1px solid $andes-gray-70;
+
+      >p {
+        font-size: $font-size-12;
+        color: $andes-gray-450;
+        margin: $andes-spacing-16;
+        padding-left: 8px;
+      }
+
+      >ul {
+        padding-left: $andes-spacing-16;
+        padding-right: $andes-spacing-16;
+        display: flex;
+        position: relative;
+        width: 100%;
+        flex-direction: column;
+
+        .andes-tag:first-child {
+          margin-top: 0;
+        }
+
+        .andes-tag:last-child {
+          margin-bottom: $andes-spacing-16;
+        }
+
+        .andes-tag {
+          width: 100%;
+          margin: $andes-spacing-16 0 0 0;
+
+          .andes-tag__tag-hover-surface {
+            background: $andes-white;
+            color: $andes-white;
+            width: 100%;
+            border-radius: 5px;
+            border: solid 1px $andes-blue-400;
+          }
+
+          .andes-tag__label {
+            color: $custom-color-blue-dark;
+          }
+
+          .andes-tag__close-svg-group {
+            fill: $custom-color-blue-dark;
+          }
+        }
+      }
+    }
+  }
+
+  .bodyDrawerClose {
+    width: calc(100% - 240px);
+    right: 0;
+  }
+
+  &__wrapper-graphics {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    padding: $andes-spacing-16;
+
+    .meli-metric__graphic-card {
+      background: $andes-white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+      position: relative;
+      margin-bottom: $andes-spacing-16;
+
+      .meli-metric__graphic {
+        padding: 0;
+        position: relative;
+        background: $andes-white;
+        right: 0;
+        bottom: 0;
+        overflow: auto;
+        border-bottom: 1px solid $andes-gray-100;
+
+        >div {
+          padding: $andes-spacing-12;
+          position: relative;
+          margin: auto;
+          height: 245px;
+        }
+      }
+    }
+  }
+
+  &__select-graphic {
+    @include flex-center;
+
+    .meli-metric__select-doughnut {
+      height: 280px;
+    }
+  }
+
+  &__header-graphic {
+    height: 45px;
+    display: flex;
+    border-bottom: 1px solid $andes-gray-100;
+    border-left: 2px solid $andes-blue-400;
+
+    .andes-dropdown.andes-dropdown--form .andes-dropdown__trigger {
+      font-size: $font-size-12;
+    }
+
+    .button-circle {
+      margin: 0;
+      padding: $andes-spacing-4;
+    }
+
+    .meli-metric__title {
+      border-right: 1px solid $andes-gray-70;
+      display: flex;
+      padding-left: $andes-spacing-16;
+      align-items: center;
+      align-content: center;
+
+      p {
+        font-weight: $font-weight-semibold;
+        color: $andes-gray-600;
+      }
+    }
+
+    .meli-metric__operation-data {
+      padding: $andes-spacing-8;
+      display: flex;
+      align-items: center;
+      padding: $andes-spacing-8;
+
+      .andes-widther {
+        padding: 0 $andes-spacing-8 0 0;
+        width: 33.3%;
+      }
+
+      p {
+        color: $andes-gray-600;
+        font-weight: 500;
+      }
+
+      .meli-metric__header-calendar {
+        display: flex;
+        flex-direction: row-reverse;
+
+        .calendar {
+          margin: auto;
+          border: none;
+          width: 400px;
+          height: 300px;
+          font-family: $font-family-primary;
+          border-radius: 5px;
+          box-shadow: $shadow-medium;
+          position: absolute;
+          z-index: 1;
+          top: 46px;
+          right: 43%;
+          border: 1px solid $andes-blue-400;
+
+          abbr[title],
+          acronym[title] {
+            text-decoration: none;
+            font-weight: 400;
+            letter-spacing: 1px;
+            font-size: 1.2em;
+          }
+
+          .react-calendar__tile {
+            padding: 1em 1.5em;
+          }
+
+          .react-calendar__navigation__label {
+            font-size: 1.5em;
+            font-weight: 200;
+          }
+
+          .react-calendar__year-view {
+            height: 200px;
+          }
+        }
+
+        .meli-metric__select-date {
+          @include flex-between;
+          align-items: center;
+
+          .button-circle {
+            padding: 5px;
+            margin-right: 22px;
+
+            .svg-inline--fa.fa-w-14 {
+              width: 14px;
+            }
+          }
+
+          p {
+            width: 100%;
+            @include flex-between;
+
+            span {
+              font-size: 10px;
+              background: $andes-gray-250;
+              color: $andes-white;
+              padding: $andes-spacing-4;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+
+    .meli-metric__operation-graphic {
+      display: flex;
+      align-items: center;
+
+      .andes-widther {
+        padding: 0 $andes-spacing-8 0 0;
+        width: 33.3%;
+      }
+    }
+
+    .meli-metric__close-graphic {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      align-content: center;
+      padding-right: $andes-spacing-8;
+    }
+
+    .meli-metric__drop-list {
+      @include flex-wrap;
+
+      &:hover {}
+
+      min-height:40px;
+
+      .drag-item {
+        background: $custom-color-blue-light;
+        min-width: 80px;
+      }
+    }
+
+    .andes-dropdown {
+      font-size: 12px;
+
+      .andes-dropdown__trigger {
+        font-size: 12px;
+      }
+    }
+
+    .andes-dropdown--open .andes-dropdown__popover {
+      z-index: 10;
+      top: 28px !important;
+    }
+
+    .andes-dropdown.andes-dropdown--form .andes-dropdown__popover .andes-list__item {
+      font-size: $font-size-12;
+    }
+  }
+
+  &__graphic-footer {
+    @include flex-center;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: $andes-spacing-8 $andes-spacing-16;
+    border-top: 1px solid $andes-gray-70;
+  }
+
+  &__search {
+    margin: $andes-spacing-16 0;
+  }
+
+  &__wellcome-message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+    background-size: 120px;
+    @include flex-center;
+    padding-top: 80px;
+    flex-direction: column;
+    justify-content: start;
+    .meli-metric__help-icon {
+      width: 250px;
+      height: auto;
+      margin-bottom: $andes-spacing-16;
+    }
+
+    .react-autosuggest__input {
+      width: 100%;
+    }
+   
+    p:nth-child(1) {
+      font-size: $font-size-32;
+      text-align: center;
+      color: $meli-metric-blue;
+      margin-bottom: $andes-spacing-16;
+      font-weight: $font-weight-light;
+    }
+
+    p:nth-child(2) {
+      font-size: $font-size-16;
+      text-align: center;
+      color: $andes-gray-600;
+      margin-bottom: $andes-spacing-16;
+      background: $andes-gray-70;
+      padding: $andes-spacing-8 $andes-spacing-16;
+      border-radius: 20px;
+    }
+
+    .react-autosuggest__container {
+      margin-top: $andes-spacing-32;
+      width: 450px;
+      box-shadow: $shadow-medium;
+    }
+  }
+
+  &__help-message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 25%;
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+    background-size: 120px;
+    background-image: url(../../assets/image/warning.svg);
+    @include flex-center;
+    flex-direction: column;
+
+
+    p {
+      font-size: $font-size-18;
+      text-align: center;
+      color: $meli-metric-blue;
+      margin-bottom: $andes-spacing-16;
+    }
+
+    .react-autosuggest__container {
+      width: 450px;
+    }
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: $andes-spacing-12;
+    left: $andes-spacing-8;
+    right: $andes-spacing-8;
+
+    .andes-button {
+      width: 100%;
+    }
+  }
+}
+
+.modal-config-alert {
+  max-width: 60em;
+  .andes-modal-dialog__content{
+    padding: $andes-spacing-24;
+  }
+  .wrapper_modal {
+    min-height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    &__title {
+      width: 100%;
+      border-radius: 5px;
+      display: flex;
+      align-content: center;
+      align-items: center;
+
+      .image-component {
+        width: 20px;
+        margin-left: 20px;
+      }
+
+      p {
+        font-size: $font-size-18;
+      }
+
+      h4 {
+        font-weight: $font-weight-semibold;
+        margin-right: $andes-spacing-16;
+      }
+    }
+
+    &__configuration-by-alert {
+      .title {
+        margin-bottom: $andes-spacing-8;
+        padding-left: $andes-spacing-8;
+        p {
+          font-size: $font-size-12;
+
+          span {
+            font-weight: $font-weight-semibold;
+          }
+        }
+      }
+
+      .list {
+        margin-bottom: $andes-spacing-16;
+        border: 1px solid $andes-gray-70;
+        border-left: 2px solid $andes-blue-400;
+        padding: $andes-spacing-8 $andes-spacing-16;
+        display: flex;
+        justify-content: space-between;
+
+        &:hover {
+          box-shadow: $shadow-medium;
+        }
+
+        p {
+          color: $andes-gray-600;
+          margin-right: $andes-spacing-16;
+
+          span {
+            font-weight: $font-weight-semibold;
+          }
+        }
+      }
+
+      .help-message{
+        background: $andes-blue-500;
+        padding: $andes-spacing-8 $andes-spacing-16;
+        text-align: center;
+      }
+    }
+
+    &__option {
+      padding: $andes-spacing-8 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 112px;
+      p {
+        padding-left: $andes-spacing-16;
+        padding-bottom: $andes-spacing-16;
+      }
+      .andes-radio--inline {
+        min-width: 35%;
+      }
+
+      >div {
+        
+        display: flex;
+        flex-direction: row;
+        .andes-checkbox {
+          margin-bottom: $andes-spacing-12;
+        }      
+        .andes-form-control {
+          width: 15%;
+          margin-left: 24px;
+        }
+      }
+    }
+
+    &__option-secondary {
+      padding: $andes-spacing-16 $andes-spacing-24 $andes-spacing-8 $andes-spacing-24;
+      display: flex;
+
+      .andes-form-control {
+        margin-right: $andes-spacing-24;
+        padding-top: 10px;
+      }
+
+      .side_id {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.notification-container-top-right {
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+  z-index: 8000;
+}
+
+.boton-warning {
+  background-color: #FF7733 !important;
+  border-color: #FF7733 !important;
+}
